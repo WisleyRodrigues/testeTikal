@@ -1,0 +1,23 @@
+version: '3'
+services:
+  apiAluno:
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    image: apialuno
+    container_name: apiAluno
+    volumes:
+      - .:/src
+    command: npm run dev
+    env_file: .env
+    environment:
+      - DB_NAME=$DB_NAME
+      - DB_USER=$DB_USER
+      - DB_PASSWORD=$DB_PASSWORD
+      - DB_HOST=$DB_HOST
+      - NODE_ENV=$NODE_ENV
+      - PORT=$PORT
+    ports:
+      - "3000:3000"
+    volumes:
+      - .:/src

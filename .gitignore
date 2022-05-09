@@ -1,0 +1,7 @@
+apiProfessor/node_modules
+apiAluno/node_modules
+
+apiProfessor/.env
+apiAluno/.env
+
+.idea
